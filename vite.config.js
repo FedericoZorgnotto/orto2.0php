@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/css/navbar.css',
                 'resources/css/login.css',
                 'resources/css/style.css',
+                'resources/css/signup.css',
             ],
             refresh: true,
         }),

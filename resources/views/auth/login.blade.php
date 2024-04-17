@@ -6,9 +6,7 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')"/>
 
-    <h3 class="floating-Text">
-        Hi there, <span class="italic">log in</span><br>and start exploring :)
-    </h3>
+
 
     <div id="card">
         <form method="POST" action="{{ route('login') }}">

@@ -39,8 +39,12 @@
                     </button>
                 </a>
             </div>
+
+
             <div id="validation-Button">
-                <button id="enter-Account">JOIN</button>
+                <x-primary-button id="enter-Account">
+                    {{ __('JOIN') }}
+                </x-primary-button>
             </div>
         </form>
     </div>

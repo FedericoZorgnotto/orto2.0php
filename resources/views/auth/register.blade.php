@@ -1,4 +1,6 @@
-<x-guest-layout>
+@vite('resources/css/signup.css')
+
+<x-app-layout>
     <h3 class="floating-Text">
         Hi there, <span class="italic">sign up</span><br>and start exploring :)
     </h3>
@@ -50,9 +52,12 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-primary-button class="ms-4">
-                    {{ __('Register') }}
-                </x-primary-button>
+
+                <div id="validation-Buttons">
+                    <x-primary-button id="create-Account">
+                        {{ __('REGISTER') }}
+                    </x-primary-button>
+                </div>
             </div>
         </form>
     </div>
@@ -111,4 +116,4 @@
 {{--            </x-primary-button>--}}
 {{--        </div>--}}
 {{--    </form>--}}
-</x-guest-layout>
+</x-app-layout>

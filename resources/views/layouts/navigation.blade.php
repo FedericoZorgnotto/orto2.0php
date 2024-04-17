@@ -1,4 +1,5 @@
 <!--TODO: cambiare le route con route reali -->
+@vite(['resources/css/navbar.css'])
 
 <nav>
     <div class="header-left">

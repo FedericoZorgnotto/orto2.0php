@@ -1,5 +1,4 @@
 <!-- TODO: sistemare grafica -->
-<!-- TODO: cambiare le route con router reali -->
 
 @vite('resources/css/login.css')
 

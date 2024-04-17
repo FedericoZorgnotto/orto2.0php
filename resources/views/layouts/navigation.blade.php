@@ -19,7 +19,7 @@
     <div class="header-right">
         <div class="selector">
             <div class="ball-Pointer"></div>
-            <a id="home" href="{{route("login")}}">HOME</a>
+            <a id="home" href="{{route("welcome")}}">HOME</a>
         </div>
         <div class="account">
             <div class="selector">

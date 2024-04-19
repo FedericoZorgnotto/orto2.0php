@@ -7,7 +7,7 @@
     <h1>Modifica annuncio</h1>
     <form action="{{ route('ads.update', $ad->id) }}" method="POST">
         @csrf
-        @method('PUT')
+        @method('PATCH')
 
         <div class="form-group">
             <label for="title">Titolo</label>

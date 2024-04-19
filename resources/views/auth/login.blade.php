@@ -1,8 +1,8 @@
 <!-- TODO: sistemare grafica -->
 
-@vite('resources/css/login.css')
+@vite(['resources/css/navbar.css', 'resources/css/login.css', 'resources/css/style.css'])
 
-<x-app-layout>
+<x-app-layout> {{-- guardati come funzionano i componenti e i layout su laravel, soprautto quest'ultimi. consentono di scrivere per esempio la navbar una volta sola e reincludarla dove si vuole come si vuole.  con i cmponenti si possono fare per esempio delle card personalizzabili tramite delle variabili --}}
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')"/>
 

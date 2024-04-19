@@ -6,7 +6,7 @@
 
     <title>Orto 2.0 | Home</title>
 
-    @vite(["resources/css/home.css"])
+    @vite(["resources/css/home.css"])  <!-- per includere css o js devi fare così, i file css o js devono essere nella cartella resources e aggiunti al file vite.config.js-->
 
 </head>
 <body>

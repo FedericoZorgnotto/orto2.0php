@@ -5,6 +5,16 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
 footer h3 {
     color: var(--green);
     position: fixed;
@@ -16,8 +26,8 @@ footer h3 {
 /* --- Font --- */
 @font-face {
     font-family: 'Roboto Mono', monospace;
-    src: url('../fonts/RobotoMono-Italic-VariableFont_wght.ttf');
-    src: url('../fonts/RobotoMono-VariableFont_wght.ttf');
+    src: url('./public/font/RobotoMono-Italic-VariableFont_wght.ttf');
+    src: url('./public/fonts/RobotoMono-VariableFont_wght.ttf');
 }
 
 body {

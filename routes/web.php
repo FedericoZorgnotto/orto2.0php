@@ -4,6 +4,7 @@ use App\Http\Controllers\AdController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -26,7 +27,6 @@ Route::get('/ads/{ad}/edit', [AdController::class, 'edit'])->middleware(['auth',
 Route::patch('/ads/{ad}', [AdController::class, 'update'])->middleware(['auth', 'verified', 'CheckAdOwnership'])->name('ads.update');
 Route::delete('/ads/{ad}', [AdController::class, 'destroy'])->middleware(['auth', 'verified', 'CheckAdOwnership'])->name('ads.destroy');
 Route::post('/ads/{ad}/images', 'AdImageController@store')->middleware(['auth', 'verified', 'CheckAdOwnership'])->name('ads.images.store');
-
 
 
 require __DIR__.'/auth.php';

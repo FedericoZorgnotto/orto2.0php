@@ -42,24 +42,53 @@
             @endif
             <a id="home" href="{{ route("welcome") }}">HOME</a>
         </div>
-        <div class="account">
-            <div class="selector">
-                @if($currentPage == "signup")
-                    <div class="visible-Ball-Pointer"></div>
-                @else
+        @auth
+            <div class="account">
+                <div class="selector">
+                    @if($currentPage == "dashboard")
+                        <div class="visible-Ball-Pointer"></div>
+                    @else
+                        <div class="ball-Pointer"></div>
+                    @endif
+                    <a href="{{ route("dashboard") }}" class="noMargin">DASHBOARD</a>
+                </div>
+                <div id="slash">/</div>
+
+                {{-- TODO:aggiustare allineamento navbar--}}
+
+                <div class="selector">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <x-dropdown-link :href="route('logout')"
+                                         onclick="event.preventDefault();
+                                         this.closest('form').submit();"
+                                         class="noMargin">
+                            {{ __('LOGOUT') }}
+                        </x-dropdown-link>
+                    </form>
                     <div class="ball-Pointer"></div>
-                @endif
-                <a class="noMargin" href="{{ route("signup") }}">SIGNUP</a>
+                </div>
             </div>
-            <div id="slash">/</div>
-            <div class="selector">
-                <a class="noMargin" href="{{ route("login") }}" onclick="">LOGIN</a>
-                @if($currentPage == "login")
-                    <div class="visible-Ball-Pointer"></div>
-                @else
-                    <div class="ball-Pointer"></div>
-                @endif
+        @else
+            <div class="account">
+                <div class="selector">
+                    @if($currentPage == "signup")
+                        <div class="visible-Ball-Pointer"></div>
+                    @else
+                        <div class="ball-Pointer"></div>
+                    @endif
+                    <a class="noMargin" href="{{ route("signup") }}">SIGNUP</a>
+                </div>
+                <div id="slash">/</div>
+                <div class="selector">
+                    <a class="noMargin" href="{{ route("login") }}">LOGIN</a>
+                    @if($currentPage == "login")
+                        <div class="visible-Ball-Pointer"></div>
+                    @else
+                        <div class="ball-Pointer"></div>
+                    @endif
+                </div>
             </div>
-        </div>
+        @endauth
     </div>
 </nav>

@@ -7,7 +7,7 @@
         Hi there, <span class="italic">sign up</span><br>and start exploring :)
     </h3>
     <div id="card">
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('signup') }}">
             @csrf
             <!-- Name -->
             <div>
@@ -57,7 +57,7 @@
 
                 <div id="validation-Buttons">
                     <x-primary-button id="create-Account">
-                        {{ __('REGISTER') }}
+                        {{ __('SIGNUP') }}
                     </x-primary-button>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\Request;
 use App\Models\Ad;
 
@@ -54,7 +55,7 @@ class AdController extends Controller
 
             // Ritorna una risposta di successo
             return redirect()->route('ads.index')->with('success', 'Annuncio creato con successo');
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             // Se si verifica un errore durante il salvataggio dell'annuncio,
             // restituisce l'utente alla pagina di creazione dell'annuncio con un messaggio di errore
             return redirect()->back()->withInput()->withErrors([$e->getMessage()]);

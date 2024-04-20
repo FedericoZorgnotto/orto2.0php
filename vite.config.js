@@ -12,10 +12,15 @@ export default defineConfig({
                 'resources/css/login.css',
                 'resources/css/style.css',
                 'resources/css/signup.css',
+
+
+
                 'resources/css/navbar/navbarDark.css',
                 'resources/css/navbar/navbarLight.css',
+                'resources/css/navbar/searchBarDark.css',
                 'resources/css/footerDark.css',
                 'resources/css/footerLight.css',
+                'resources/ads/trade.css'
             ],
             refresh: true,
         }),

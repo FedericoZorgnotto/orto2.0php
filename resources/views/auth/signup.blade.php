@@ -9,22 +9,22 @@
         <form method="POST" action="{{ route('signup') }}">
             @csrf
             <div class="user-Account">
-                <x-text-input id="userName" type="text" name="name" :value="old('name')" required autofocus
+                <x-text-input id="userName" type="text" name="name" :value="old('name')"  autofocus
                               autocomplete="name" placeholder="NAME & SURNAME"/>
                 <x-input-error :messages="$errors->get('name')"/>
             </div>
             <div class="user-Account user-Account-Margin">
-                <x-text-input id="userEmail" type="email" name="email" :value="old('email')" required autofocus
+                <x-text-input id="userEmail" type="email" name="email" :value="old('email')"  autofocus
                               autocomplete="email" placeholder="EMAIL"/>
                 <x-input-error :messages="$errors->get('email')"/>
             </div>
             <div class="user-Account">
-                <x-text-input id="userPassword" type="password" name="password" required autofocus
+                <x-text-input id="userPassword" type="password" name="password"  autofocus
                               placeholder="PASSWORD" autocomplete="new-password"/>
                 <x-input-error :messages="$errors->get('password')"/>
             </div>
             <div class="user-Account">
-                <x-text-input id="userPassword" type="password" name="password_confirmation" required autocomplete="new-password" placeholder="PASSWORD CONFIRMATION"/>
+                <x-text-input id="userPassword" type="password" name="password_confirmation"  autocomplete="new-password" placeholder="PASSWORD CONFIRMATION"/>
                 <x-input-error :messages="$errors->get('password_confirmation')"/>
             </div>
             <div id="validation-Buttons">

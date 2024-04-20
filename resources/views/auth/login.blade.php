@@ -10,21 +10,14 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="user-Account">
-                <x-text-input id="userEmail" type="email" name="email" :value="old('email')" required autofocus
+                <x-text-input id="userEmail" type="email" name="email" :value="old('email')" autofocus
                               autocomplete="email" placeholder="EMAIL"/>
                 <x-input-error :messages="$errors->get('email')"/>
             </div>
             <div>
-                <x-text-input id="userPassword" type="password" name="password" required autofocus
+                <x-text-input id="userPassword" type="password" name="password" autofocus
                               placeholder="PASSWORD" autocomplete="current-password"/>
                 <x-input-error :messages="$errors->get('password')"/>
-            </div>
-            <div>
-                @if (Route::has('password.request'))
-                    <a id="forgot" href="{{ route('password.request') }}">
-                        {{ __('Forgot?') }}
-                    </a>
-                @endif
             </div>
             <div class="google-btn-Space">
                 <a href="{{ route('welcome') }}">

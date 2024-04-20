@@ -1,34 +1,68 @@
-{{--@extends('layouts.app')--}}
-{{-- tramite questi comandi si possono usare i layout, il  @section('content') indica dove inserire il contenuto nel layout}}
-{{--@section('content')--}}
+@vite('resources/css/ads/trade.css')
+@vite('resources/css/navbar/searchBarDark.css')
 
-{{--non mi interessano le classi: si possono modificare, servono solo per esempio per far vedere che parti della pagina sarebbero--}}
-
-<div class="container">
-    <h1>Lista degli Annunci</h1>
-
-    <!-- Pulsante per creare un nuovo annuncio -->
-    <a href="{{ route('ads.create') }}" class="btn btn-primary mb-3">Crea Annuncio</a>
-
-    <!-- Form per eseguire una ricerca -->
+<x-app-layout theme="dark" currentPage="trade" pageTitle="Trade">
     <form action="{{ route('ads.index') }}" method="GET" class="mb-3">
-        <div class="form-group">
-            <input type="text" name="query" class="form-control" placeholder="Cerca...">
-        </div>
-        <button type="submit" class="btn btn-primary">Cerca</button>
+        <input type="text" class="search-Bar" name="query" placeholder="Type here, we will find it for you">
     </form>
-
-    <!-- Elenco degli annunci -->
-    @foreach ($ads as $ad)
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">{{ $ad->title }}</h5>
-                <p class="card-text">{{ $ad->description }}</p>
-                <p class="card-text">Prezzo: {{ $ad->price }}</p>
-                <!-- Altri dettagli dell'annuncio -->
-                <a href="{{ route('ads.show', $ad->id) }}" class="btn btn-primary">Visualizza</a>
+    <div class="user-Interactions">
+        <h1>CLOSE TO YOU</h1>
+    </div>
+    <div id="container">
+        @foreach ($ads as $ad)
+            <div class="card">
+                <div class="user-Info">
+                    <img class="profile-Picture" alt="Profile Picture">
+                    <div class="user-Score">
+                        <h3>John Smith</h3>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star gray"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-Info">
+                    <h2>{{ $ad->title }}</h2>
+                    <h3>Via Torino 40, Saluzzo, CN</h3>
+                    <h3>Quantity: <span class="italic">5kg</span></h3>
+                </div>
+                <img class="product-Photo"  alt="Product Photo">
+                <button class="contact-Seller"
+                        >CONTACT
+                </button>
             </div>
-        </div>
-    @endforeach
-</div>
-{{--@endsection--}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $ad->title }}</h5>
+                    <p class="card-text">{{ $ad->description }}</p>
+                    <p class="card-text">Prezzo: </p>
+                    <!-- Altri dettagli dell'annuncio -->
+                    <a href="{{ route('ads.show', $ad->id) }}" class="btn btn-primary">Visualizza</a>
+                </div>
+            </div>
+
+
+
+
+
+        @endforeach
+    </div>
+</x-app-layout>

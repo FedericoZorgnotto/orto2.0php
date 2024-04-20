@@ -8,7 +8,6 @@
 <nav>
     <div class="header-left">
         <div class="selector">
-            {{-- TODO: trasformare if in component --}}
             @if($currentPage == "trade")
                 <div class="visible-Ball-Pointer"></div>
             @else

@@ -7,6 +7,7 @@
     </form>
     <div class="user-Interactions">
         <h1>CLOSE TO YOU</h1>
+        <a href="{{ route('ads.create') }}" class="upload-Something">upload something</a>
     </div>
     <div id="container">
         @foreach ($ads as $ad)
@@ -34,22 +35,14 @@
                         >CONTACT
                 </button>
             </div>
+        @endforeach
+    </div>
+</x-app-layout>
 
 
+{{--
 
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="card mb-3">
+<div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ $ad->title }}</h5>
                     <p class="card-text">{{ $ad->description }}</p>
@@ -60,9 +53,4 @@
             </div>
 
 
-
-
-
-        @endforeach
-    </div>
-</x-app-layout>
+--}}

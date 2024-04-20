@@ -14,10 +14,6 @@ main {
     width: 100%;
 }
 
-footer {
-    background-color: green;
-}
-
 a{
     text-decoration: none;
     color: var(--white);;

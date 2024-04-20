@@ -6,7 +6,7 @@
     </h3>
     <div id="card">
         <h1>New account</h1>
-        <form method="POST" action="{{ route('welcome') }}">
+        <form method="POST" action="{{ route('signup') }}">
             @csrf
             <div class="user-Account">
                 <x-text-input id="userName" type="text" name="name" :value="old('name')" required autofocus

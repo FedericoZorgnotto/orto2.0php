@@ -1,33 +1,27 @@
-body {
+html {
     height: 100%;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
 a{
     text-decoration: none;
-    color: #F5F5F7;
+    color: var(--white);;
 }
-
-#centro {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15%;
-    margin-right: 7%;
-}
-
-img {
-    display: flex;
-    justify-content: space-evenly;
-    width: 6%;
-    height: 6%;
-    margin-left: 46%;
-    margin-top: 1%;
-}
-
 
 .wrapper div {
-    background-color: #44653B;
-    color: #F5F5F7;
+    background-color: var(--green);
+    color: var(--white);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -38,14 +32,10 @@ img {
 
 @media screen and (min-width: 992px) {
     img {
-        display: flex;
-        justify-content: space-evenly;
-        width: 6%;
-        height: 6%;
-        margin-left: 45%;
+        width: 130px;
         margin-top: 1%;
+        margin-bottom: 13.5%;
     }
-
 
     .wrapper {
         display: grid;
@@ -114,8 +104,6 @@ img {
         font-weight: bold;
         margin-top: 75px;
         margin-left: 60px;
-        text-decoration: none;
-        color: #F5F5F7;
     }
 
     #text4down {
@@ -124,8 +112,6 @@ img {
         font-weight: bold;
         margin-top: 315px;
         margin-left: 50px;
-        text-decoration: none;
-        color: #F5F5F7;
     }
 
     .grid5 {
@@ -163,14 +149,14 @@ img {
 
 @media screen and (min-width: 430px) and (max-width: 992px) {
     img {
-        display: flex;
-        justify-content: space-evenly;
-        width: 6%;
-        height: 6%;
-        margin-left: 47%;
-        margin-top: 1%;
+        width: 100px;
+        margin-top: 0.5%;
+        margin-bottom: 2%;
     }
 
+    h3 {
+        display: none;
+    }
 
     .wrapper {
         display: grid;
@@ -238,9 +224,6 @@ img {
         font-weight: bold;
         margin-top: 85px;
         margin-left: 70px;
-        text-decoration: none;
-        color: #F5F5F7;
-
     }
 
     #text4down {
@@ -249,8 +232,6 @@ img {
         font-weight: bold;
         margin-top: 85px;
         margin-left: 560px;
-        text-decoration: none;
-        color: #F5F5F7;
     }
 
     .grid5 {

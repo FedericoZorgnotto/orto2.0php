@@ -1,6 +1,3 @@
-
-
-/* --- SingUp Form --- */
 main {
     display: flex;
     justify-content: center;
@@ -34,8 +31,8 @@ input {
     border: solid 5px var(--green);
     border-radius: 35px;
     height: 14px;
-    width: 430px;
-    padding: 15px;
+    width: 475px;
+    padding: 22px;
     font-size: 16px;
     font-weight: bold;
     font-style: italic;
@@ -49,51 +46,23 @@ input::placeholder {
 }
 
 .user-Account {
-    margin-bottom: 15px;
-}
-
-.negative-Feedback {
-    color: var(--green);
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-.hide {
-    visibility: hidden;
-}
-
-.ball-Negative-Feedback {
-    background: var(--green);
-    border-radius: 35px;
-    width: 11px;
-    height: 11px;
-    margin-right: 5px;
+    margin-bottom: 40px;
 }
 
 #forgot {
+    text-decoration: none;
     color: var(--green);
     font-weight: bold;
     font-size: 16px;
     margin-right: 20px;
-}
-
-a {
-    text-decoration: none;
-}
-
-#forgot-Btn {
-    display: flex;
-    justify-content: space-between;
+    margin-left: 400px;
 }
 
 #validation-Button {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-top: 135px;
+    margin-top: 130px;
 }
 
 #enter-Account {
@@ -113,23 +82,22 @@ a {
 }
 
 #enter-Account:hover {
-    text-indent: 140px;
+    text-indent: 150px;
     cursor: pointer;
 }
 
-/* ------------------- */
+.google-btn-Space {
+    margin-top: 110px;
+}
 
-
-/* --- Google Button --- */
 .login-with-google-btn {
     color: #757575;
     font-weight: bold;
     font-size: 16px;
     width: 475px;
-    height: 50px;
-    margin-top: 80px;
+    height: 55px;
     padding-left: 20px;
-    padding-top: 4px;
+    padding-top: 5px;
     border-radius: 35px;
     border: solid 5px var(--green);
     transition: background-color 0.3s, box-shadow 0.3s;
@@ -148,5 +116,3 @@ a {
 .login-with-google-btn:active {
     background-color: #eeeeee;
 }
-
-/* --------------------- */

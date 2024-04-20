@@ -1,31 +1,31 @@
 @props(['theme', 'currentPage'])
-@vite(['resources/css/style.css'])
 
 @if($theme == "light")
     @vite(['resources/css/navbar/navbarLight.css'])
     <nav>
         <div class="header-left">
             <div class="selector">
+                {{-- TODO: trasformare if in component --}}
                 @if($currentPage == "trade")
-                    <div class="ball-Pointer"></div>
-                @else
                     <div class="visible-Ball-Pointer"></div>
+                @else
+                    <div class="ball-Pointer"></div>
                 @endif
-                <a href="{{ route("login") }}">TRADE</a>
+                <a href="{{ route("ads.index") }}">TRADE</a>
             </div>
             <div class="selector">
                 @if($currentPage == "purchase")
-                    <div class="ball-Pointer"></div>
-                @else
                     <div class="visible-Ball-Pointer"></div>
+                @else
+                    <div class="ball-Pointer"></div>
                 @endif
-                <a href="{{ route("login") }}">PURCHASE</a>
+                <a href="{{ route("welcome") }}">PURCHASE</a>
             </div>
             <div class="selector">
                 @if($currentPage == "learn")
-                    <div class="ball-Pointer"></div>
-                @else
                     <div class="visible-Ball-Pointer"></div>
+                @else
+                    <div class="ball-Pointer"></div>
                 @endif
                 <a href="{{ route("login") }}">LEARN</a>
             </div>
@@ -33,28 +33,28 @@
         <div class="header-right">
             <div class="selector">
                 @if($currentPage == "home")
-                    <div class="ball-Pointer"></div>
-                @else
                     <div class="visible-Ball-Pointer"></div>
+                @else
+                    <div class="ball-Pointer"></div>
                 @endif
                 <a id="home" href="{{route("welcome")}}">HOME</a>
             </div>
             <div class="account">
                 <div class="selector">
                     @if($currentPage == "signup")
-                        <div class="ball-Pointer"></div>
-                    @else
                         <div class="visible-Ball-Pointer"></div>
+                    @else
+                        <div class="ball-Pointer"></div>
                     @endif
-                    <a class="noMargin" href="{{route("login")}}">SIGNUP</a>
+                    <a class="noMargin" href="{{route("register")}}">SIGNUP</a>
                 </div>
                 <div id="slash">/</div>
                 <div class="selector">
                     <a class="noMargin" href="{{route("login")}}" onclick="">LOGIN</a>
                     @if($currentPage == "login")
-                        <div class="ball-Pointer"></div>
-                    @else
                         <div class="visible-Ball-Pointer"></div>
+                    @else
+                        <div class="ball-Pointer"></div>
                     @endif
                 </div>
             </div>
@@ -65,55 +65,56 @@
     <nav>
         <div class="header-left">
             <div class="selector">
+                {{-- TODO: trasformare if in component --}}
                 @if($currentPage == "trade")
-                    <div class="ball-Pointer"></div>
-                @else
                     <div class="visible-Ball-Pointer"></div>
+                @else
+                    <div class="ball-Pointer"></div>
                 @endif
-                <a href="{{ route("#") }}">TRADE</a>
+                <a href="{{ route("ads.index") }}">TRADE</a>
             </div>
             <div class="selector">
                 @if($currentPage == "purchase")
-                    <div class="ball-Pointer"></div>
-                @else
                     <div class="visible-Ball-Pointer"></div>
+                @else
+                    <div class="ball-Pointer"></div>
                 @endif
-                <a href="{{ route("#") }}">PURCHASE</a>
+                <a href="{{ route("welcome") }}">PURCHASE</a>
             </div>
             <div class="selector">
                 @if($currentPage == "learn")
-                    <div class="ball-Pointer"></div>
-                @else
                     <div class="visible-Ball-Pointer"></div>
+                @else
+                    <div class="ball-Pointer"></div>
                 @endif
-                <a href="{{ route("#") }}">LEARN</a>
+                <a href="{{ route("login") }}">LEARN</a>
             </div>
         </div>
         <div class="header-right">
             <div class="selector">
                 @if($currentPage == "home")
-                    <div class="ball-Pointer"></div>
-                @else
                     <div class="visible-Ball-Pointer"></div>
+                @else
+                    <div class="ball-Pointer"></div>
                 @endif
                 <a id="home" href="{{route("welcome")}}">HOME</a>
             </div>
             <div class="account">
                 <div class="selector">
                     @if($currentPage == "signup")
-                        <div class="ball-Pointer"></div>
-                    @else
                         <div class="visible-Ball-Pointer"></div>
+                    @else
+                        <div class="ball-Pointer"></div>
                     @endif
-                    <a class="noMargin" href="{{route("login")}}">SIGNUP</a>
+                    <a class="noMargin" href="{{route("register")}}">SIGNUP</a>
                 </div>
                 <div id="slash">/</div>
                 <div class="selector">
                     <a class="noMargin" href="{{route("login")}}" onclick="">LOGIN</a>
                     @if($currentPage == "login")
-                        <div class="ball-Pointer"></div>
-                    @else
                         <div class="visible-Ball-Pointer"></div>
+                    @else
+                        <div class="ball-Pointer"></div>
                     @endif
                 </div>
             </div>

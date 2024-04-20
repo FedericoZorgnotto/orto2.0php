@@ -1,6 +1,8 @@
 @vite('resources/css/signup.css')
 
-<x-app-layout>
+{{-- TODO: trasformare il /resource in signup --}}
+
+<x-app-layout theme="dark" currentPage="signup" pageTitle="Signup">
     <h3 class="floating-Text">
         Hi there, <span class="italic">sign up</span><br>and start exploring :)
     </h3>

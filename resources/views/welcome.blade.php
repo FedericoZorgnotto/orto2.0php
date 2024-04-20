@@ -27,7 +27,7 @@
                     <a id="text2" href="{{ route("login") }}">LEARN</a>
                 </div>
                 <div class="grid3">
-                    <a id="text3" href="{{ route("login") }}">BUY</a>
+                    <a id="text3" href="{{ route("ads.index") }}">BUY</a>
                 </div>
                 <div class="grid4">
                     <a id="text4up" href="{{ route("login") }}">LOGIN</a>
@@ -37,7 +37,7 @@
                     <a id="text5" href="{{ route("login") }}">OUR APP</a>
                 </div>
                 <div class="grid6">
-                    <a id="text6" href="{{ route("login") }}">SELL</a>
+                    <a id="text6" href="{{ route("ads.create") }}">SELL</a>
                 </div>
             </div>
         </div>

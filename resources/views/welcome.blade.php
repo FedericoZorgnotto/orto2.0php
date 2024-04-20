@@ -31,7 +31,7 @@
                 </div>
                 <div class="grid4">
                     <a id="text4up" href="{{ route("login") }}">LOGIN</a>
-                    <a id="text4down" href="{{ route("register") }}">SIGNUP</a>
+                    <a id="text4down" href="{{ route("signup") }}">SIGNUP</a>
                 </div>
                 <div class="grid5">
                     <a id="text5" href="{{ route("login") }}">OUR APP</a>

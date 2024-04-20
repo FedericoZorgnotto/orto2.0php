@@ -46,7 +46,7 @@
                     @else
                         <div class="ball-Pointer"></div>
                     @endif
-                    <a class="noMargin" href="{{route("register")}}">SIGNUP</a>
+                    <a class="noMargin" href="{{route("signup")}}">SIGNUP</a>
                 </div>
                 <div id="slash">/</div>
                 <div class="selector">
@@ -106,7 +106,7 @@
                     @else
                         <div class="ball-Pointer"></div>
                     @endif
-                    <a class="noMargin" href="{{route("register")}}">SIGNUP</a>
+                    <a class="noMargin" href="{{route("signup")}}">SIGNUP</a>
                 </div>
                 <div id="slash">/</div>
                 <div class="selector">

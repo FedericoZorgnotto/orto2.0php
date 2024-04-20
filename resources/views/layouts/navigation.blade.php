@@ -40,7 +40,7 @@
             @else
                 <div class="ball-Pointer"></div>
             @endif
-            <a id="home" href="{{route("welcome")}}">HOME</a>
+            <a id="home" href="{{ route("welcome") }}">HOME</a>
         </div>
         <div class="account">
             <div class="selector">
@@ -49,11 +49,11 @@
                 @else
                     <div class="ball-Pointer"></div>
                 @endif
-                <a class="noMargin" href="{{route("signup")}}">SIGNUP</a>
+                <a class="noMargin" href="{{ route("signup") }}">SIGNUP</a>
             </div>
             <div id="slash">/</div>
             <div class="selector">
-                <a class="noMargin" href="{{route("login")}}" onclick="">LOGIN</a>
+                <a class="noMargin" href="{{ route("login") }}" onclick="">LOGIN</a>
                 @if($currentPage == "login")
                     <div class="visible-Ball-Pointer"></div>
                 @else

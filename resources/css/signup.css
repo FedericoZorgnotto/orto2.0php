@@ -46,44 +46,12 @@ input::placeholder {
     font-style: italic;
 }
 
-#user-Info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-#user-Info input {
-    width: 235px;
-}
-
 .user-Account {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
-#user-Account-Margin {
-    margin-bottom: 60px;
-}
-
-.negative-Feedback {
-    color: var(--green);
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-.hide {
-    visibility: hidden;
-}
-
-.ball-Negative-Feedback {
-    background: var(--green);
-    border-radius: 35px;
-    width: 11px;
-    height: 11px;
-    margin-right: 5px;
+.user-Account-Margin {
+    margin-bottom: 100px;
 }
 
 #validation-Buttons {

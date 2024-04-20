@@ -44,4 +44,18 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public  function ads()
+    {
+        return $this->hasMany(Ad::class);
+    }
+    public function tokens()
+    {
+        return $this->hasMany(Token::class);
+    }
+    public function createToken(string $name)
+    {
+        return $this->tokens()->create([
+            'token' => hash('sha256', $name . now()),
+        ]);
+    }
 }

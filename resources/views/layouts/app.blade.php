@@ -1,5 +1,4 @@
 @props(['theme', 'currentPage', 'pageTitle'])
-
 @vite('resources/css/style.css')
 
 <!DOCTYPE html>

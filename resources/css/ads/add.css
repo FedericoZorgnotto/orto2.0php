@@ -10,7 +10,6 @@ html {
     margin-left: 13%;
 }
 
-/* --- Chat --- */
 .card {
     color: var(--green);
     background-color: white;
@@ -80,10 +79,6 @@ h2 {
     text-indent: 90px;
 }
 
-/* ------------ */
-
-
-/* --- Seller Card --- */
 #seller-Info {
     background-color: white;
     width: 400px;

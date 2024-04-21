@@ -32,7 +32,7 @@
             <a id="text5" href="{{ route("welcome") }}">OUR APP</a>
         </div>
         <div class="grid6">
-            <a id="text6" href="{{ route("welcome") }}">SELL</a>
+            <a id="text6" href="{{ route("ads.create") }}">SELL</a>
         </div>
     </div>
 </main>

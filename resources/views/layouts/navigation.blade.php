@@ -35,9 +35,9 @@
     <div class="header-right">
         <div class="selector">
             @if($currentPage == "home")
-                <div class="visible-Ball-Pointer"></div>
+                <div class="visible-Ball-Pointer homePointer"></div>
             @else
-                <div class="ball-Pointer"></div>
+                <div class="ball-Pointer homePointer"></div>
             @endif
             <a id="home" href="{{ route("welcome") }}">HOME</a>
         </div>
@@ -45,16 +45,13 @@
             <div class="account">
                 <div class="selector">
                     @if($currentPage == "dashboard")
-                        <div class="visible-Ball-Pointer"></div>
+                        <div id="dashboard" class="visible-Ball-Pointer"></div>
                     @else
-                        <div class="ball-Pointer"></div>
+                        <div id="dashboard" class="ball-Pointer"></div>
                     @endif
-                    <a href="{{ route("dashboard") }}" class="noMargin">DASHBOARD</a>
+                    <a id="dashboard" href="{{ route("dashboard") }}" class="noMargin">DASHBOARD</a>
                 </div>
-                <div id="slash">/</div>
-
-                {{-- TODO:aggiustare allineamento navbar--}}
-
+                <div id="slash" class="slashMarginFix">/</div>
                 <div class="selector">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
@@ -65,7 +62,7 @@
                             {{ __('LOGOUT') }}
                         </x-dropdown-link>
                     </form>
-                    <div class="ball-Pointer"></div>
+                    <div class="ball-Pointer logoutPointer"></div>
                 </div>
             </div>
         @else

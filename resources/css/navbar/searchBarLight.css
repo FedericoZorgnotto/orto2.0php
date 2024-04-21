@@ -1,0 +1,19 @@
+.search-Bar {
+    color: var(--white);
+    background-color: var(--green);
+    border: solid 5px var(--white);
+    border-radius: 35px;
+    text-align: center;;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search-Bar::placeholder {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+}

@@ -49,15 +49,19 @@ input::placeholder {
     margin-bottom: 35px;
 }
 
+.user-Account-password {
+    margin-bottom: 50px;
+}
+
 .user-Account-Margin {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 }
 
 #validation-Buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 #create-Account {
@@ -160,4 +164,27 @@ input::placeholder {
 #new-mail:hover {
     text-indent: 90px;
     cursor: pointer;
+}
+
+.negative-Feedback {
+    color: var(--green);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.ball-Negative-Feedback {
+    background: var(--green);
+    border-radius: 35px;
+    width: 11px;
+    height: 11px;
+    margin-right: 5px;
+}
+
+#spacer {
+    margin-left: 50px;
 }

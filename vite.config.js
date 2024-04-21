@@ -20,7 +20,8 @@ export default defineConfig({
                 'resources/css/navbar/searchBarDark.css',
                 'resources/css/footerDark.css',
                 'resources/css/footerLight.css',
-                'resources/ads/trade.css'
+                'resources/ads/trade.css',
+                'resources/ads/add.css'
             ],
             refresh: true,
         }),

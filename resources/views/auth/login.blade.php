@@ -12,12 +12,12 @@
             <div class="user-Account">
                 <x-text-input id="userEmail" type="email" name="email" :value="old('email')" autofocus
                               autocomplete="email" placeholder="EMAIL"/>
-                <x-input-error :messages="$errors->get('email')"/>
+                <x-input-error :messages="$errors->get('email')" whereError="email"/>
             </div>
             <div>
                 <x-text-input id="userPassword" type="password" name="password" autofocus
                               placeholder="PASSWORD" autocomplete="current-password"/>
-                <x-input-error :messages="$errors->get('password')"/>
+                <x-input-error :messages="$errors->get('password')" whereError="password"/>
             </div>
             <div class="google-btn-Space">
                 <a href="{{ route('welcome') }}">

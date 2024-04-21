@@ -1,9 +1,15 @@
-@props(['messages'])
+@props(['messages', 'whereError'])
 
 @if ($messages)
-    <ul {{ $attributes->merge(['class' => 'text-sm text-red-600 space-y-1']) }}>
+    @if($whereError == 'password' || $whereError == 'mailSingup' || $whereError == 'passwordSingup')
+        <div class="negative-Feedback" style="margin-bottom: -4%">
+    @else
+        <div class="negative-Feedback" style="margin-bottom: -3.8%">
+    @endif
         @foreach ((array) $messages as $message)
-            <li>{{ $message }}</li>
+            <div class="ball-Negative-Feedback"></div>
+            <span>{{ $message }}</span>
+            <div id="spacer"></div>
         @endforeach
-    </ul>
+        </div>
 @endif

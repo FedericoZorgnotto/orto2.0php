@@ -1,6 +1,5 @@
 @props(['theme', 'currentPage'])
 
-
 @auth()
     @if($theme == "light")
         @vite(['resources/css/navbar/navbarLight.css'])
@@ -14,8 +13,6 @@
         @vite(['resources/css/navbar/navbarDark.css'])
     @endif
 @endauth
-
-
 
 <nav>
     <div class="header-left">
@@ -33,7 +30,7 @@
             @else
                 <div class="ball-Pointer"></div>
             @endif
-            <a href="{{ route("welcome") }}">PURCHASE</a>
+            <a href="{{ route("ourproduct") }}">PURCHASE</a>
         </div>
         <div class="selector">
             @if($currentPage == "learn")
@@ -41,7 +38,7 @@
             @else
                 <div class="ball-Pointer"></div>
             @endif
-            <a href="{{ route("login") }}">LEARN</a>
+            <a href="{{ route("welcome") }}">LEARN</a>
         </div>
     </div>
     <div class="header-right">

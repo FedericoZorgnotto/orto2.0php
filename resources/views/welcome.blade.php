@@ -29,7 +29,7 @@
             <a id="text4down" href="{{ route("signup") }}">SIGNUP</a>
         </div>
         <div class="grid5">
-            <a id="text5" href="{{ route("welcome") }}">OUR APP</a>
+            <a id="text5" href="{{ route("ourproduct") }}">OUR PRODUCT</a>
         </div>
         <div class="grid6">
             <a id="text6" href="{{ route("ads.create") }}">SELL</a>

@@ -38,7 +38,7 @@
             @else
                 <div class="ball-Pointer"></div>
             @endif
-            <a href="{{ route("welcome") }}">LEARN</a>
+            <a href="{{ route("learn") }}">LEARN</a>
         </div>
     </div>
     <div class="header-right">

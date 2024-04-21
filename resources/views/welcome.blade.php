@@ -16,10 +16,10 @@
 <main>
     <div class="wrapper">
         <div class="grid1">
-            <a id="text1" href="{{ route("welcome") }}">ABOUT</a>
+            <a id="text1" href="{{ route("about") }}">ABOUT</a>
         </div>
         <div class="grid2">
-            <a id="text2" href="{{ route("welcome") }}">LEARN</a>
+            <a id="text2" href="{{ route("learn") }}">LEARN</a>
         </div>
         <div class="grid3">
             <a id="text3" href="{{ route("ads.index") }}">BUY</a>

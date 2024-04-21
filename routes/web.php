@@ -11,7 +11,8 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $user = auth()->user();
+    return view('dashboard', compact('user'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/learn', function () {

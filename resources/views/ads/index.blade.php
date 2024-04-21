@@ -13,7 +13,6 @@
         @foreach ($ads as $ad)
             <div class="card">
                 <div class="user-Info">
-                    <img class="profile-Picture" alt="Profile Picture">
                     <div class="user-Score">
                         <h3>{{$ad->user->name}}</h3>
                         <div class="stars">
@@ -38,7 +37,7 @@
                 @if(isset($ad->images()->first()->base64_image))
                     {{$ad->images()->first()->base64_image}}
                 @else
-                    {{public_path('images/placeholder.png')}}
+                    {{url('images/placeholder.png')}}
                 @endif
                 ">
                 <button class="contact-Seller" href="{{route('ads.show', ['ad' => $ad->id])}}">CONTACT

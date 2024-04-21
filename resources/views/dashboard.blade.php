@@ -1,5 +1,13 @@
 @vite('resources/css/dashboard.css')
 
+<script>
+    @if($user->tokens()!=null)
+    let tokens = @json($user->tokens);
+    console.log(tokens);
+    @endif
+    let tokenUrl = "{{route('welcome').'/hubData'}}";
+</script>
+
 <x-app-layout theme="light" currentPage="dashboard" pageTitle="Dashboard">
     <div id="wrapper">
         <div class="card">
@@ -8,6 +16,7 @@
         <div id="seller-Info">
 
         </div>
+
     </div>
 </x-app-layout>
 

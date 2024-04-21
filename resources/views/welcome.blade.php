@@ -1,5 +1,5 @@
 @vite('resources/css/style.css')
-@vite(["resources/css/home.css"])
+@vite("resources/css/home.css")
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">

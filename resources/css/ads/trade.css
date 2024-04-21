@@ -29,14 +29,6 @@ main {
     margin-bottom: 20px;
 }
 
-.profile-Picture {
-    border-radius: 100%;
-    width: 55px;
-    height: 55px;
-    margin-top: 10px;
-    margin-right: 5px;
-}
-
 .user-Score {
     margin: 0;
     display: flex;
@@ -45,6 +37,8 @@ main {
 }
 
 .user-Score h3 {
+    font-size: 30px;
+    margin-top: 0%;
     margin-bottom: 7px;
 }
 
@@ -60,12 +54,8 @@ main {
     margin-right: 5px;
 }
 
-.gray {
-    background: gray;
-}
-
 .product-Info {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     text-align: left;
 }
 
@@ -83,6 +73,7 @@ main {
 .product-Photo {
     width: 200px;
     margin-left: 40px;
+    margin-bottom: 20px
 }
 
 .contact-Seller {

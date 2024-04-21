@@ -19,7 +19,9 @@ export default defineConfig({
                 'resources/css/footerLight.css',
                 'resources/ads/trade.css',
                 'resources/ads/add.css',
-                'resources/css/dashboard.css'
+                'resources/css/dashboard.css',
+                'resources/css/contact.css',
+                'resources/css/ourproduct.css',
             ],
             refresh: true,
         }),

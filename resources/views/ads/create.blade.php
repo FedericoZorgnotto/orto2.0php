@@ -11,15 +11,15 @@
             @csrf
             <div id="seller-Info">
                 <input type="text" id="postTitle" placeholder="POST TITLE" name="title" value="{{ old('title') }}"/>
-                <x-input-error :messages="$errors->get('title')" whereError="w"/>
+                <x-input-error :messages="$errors->get('title')" whereError="#"/>
                 <div>
                     <input type="text" id="price" placeholder="PRICE" name="price" value="{{ old('price') }}"/>
-                    <x-input-error :messages="$errors->get('price')" whereError="w"/>
+                    <x-input-error :messages="$errors->get('price')" whereError="#"/>
                 </div>
                 <div>
                     <textarea id="postContent" rows="4" cols="50" placeholder="DESCRIPTION"
                               name="description">{{ old('description') }}</textarea>
-                    <x-input-error :messages="$errors->get('description')" whereError="w"/>
+                    <x-input-error :messages="$errors->get('description')" whereError="#"/>
                 </div>
                 <button id="create-Post" type="submit">POST</button>
             </div>

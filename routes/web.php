@@ -11,7 +11,8 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $user = auth()->user();
+    return view('dashboard', compact('user'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/learn', function () {
@@ -42,6 +43,9 @@ Route::get('/tokens', [TokenController::class, 'index'])->middleware(['auth', 'v
 Route::post('/tokens', [TokenController::class, 'store'])->middleware(['auth', 'verified'])->name('tokens.store');
 Route::delete('/tokens/{tokenId}', [TokenController::class, 'destroy'])->middleware(['auth', 'verified'])->name('tokens.destroy');
 
+Route::get('/ourproduct', function () {
+    return view('ourproduct');
+})->name('ourproduct');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/api.php';

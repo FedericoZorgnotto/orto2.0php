@@ -15,24 +15,33 @@
                 <div class="user-Info">
                     <img class="profile-Picture" alt="Profile Picture">
                     <div class="user-Score">
-                        <h3>John Smith</h3>
+                        <h3>{{$ad->user->name}}</h3>
                         <div class="stars">
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star gray"></div>
+                            @php
+                                $stars = rand(1, 5);
+                            @endphp
+                            @for ($i = 0; $i < $stars; $i++)
+                                <div class="star"></div>
+                            @endfor
+                            @for($i=$stars; $i<5; $i++)
+                                <div class="star gray"></div>
+                            @endfor
                         </div>
                     </div>
                 </div>
                 <div class="product-Info">
                     <h2>{{ $ad->title }}</h2>
-                    <h3>Via Torino 40, Saluzzo, CN</h3>
-                    <h3>Quantity: <span class="italic">5kg</span></h3>
+                    <h3>{{$ad->description}}</h3>
+                    <h3>Price: <span class="italic">{{$ad->price}}</span></h3>
                 </div>
-                <img class="product-Photo"  alt="Product Photo">
-                <button class="contact-Seller"
-                        >CONTACT
+                <img class="product-Photo" alt="Product Photo" src="
+                @if(isset($ad->images()->first()->base64_image))
+                    {{$ad->images()->first()->base64_image}}
+                @else
+                    {{public_path('images/placeholder.png')}}
+                @endif
+                ">
+                <button class="contact-Seller" href="{{route('ads.show', ['ad' => $ad->id])}}">CONTACT
                 </button>
             </div>
         @endforeach

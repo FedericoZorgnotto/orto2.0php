@@ -1,60 +1,48 @@
+@vite('resources/css/contact.css')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{{--@extends('layouts.app')--}}
-{{-- tramite questi comandi si possono usare i layout, il  @section('content') indica dove inserire il contenuto nel layout}}
-{{--@section('content')--}}
-
-{{--non mi interessano le classi: si possono modificare, servono solo per esempio per far vedere che parti della pagina sarebbero--}}
-
-{{-- Mostra un eventuale messaggio di errore (in sostanza se non si ha il permesso di modificare l'annuncio--}}
-@if(session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
+<x-app-layout theme="light" currentPage="contact" pageTitle="Contact">
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+    <h3 id="floating-Text">
+        Any question<br>just ask the seller
+    </h3>
+    <div id="wrapper">
+        <div id="seller-Info">
+            <div class="user-Info">
+                    <div class="user-Score">
+                        <h3>{{$ad->user->name}}</h3>
+                        <div class="stars">
+                            @php
+                                $stars = rand(1, 5);
+                            @endphp
+                            @for ($i = 0; $i < $stars; $i++)
+                                <div class="star"></div>
+                            @endfor
+                            @for($i=$stars; $i<5; $i++)
+                                <div class="star gray"></div>
+                            @endfor
+                        </div>
+                </div>
+            </div>
+            <div class="product-Info">
+                <h2 id="title">{{ $ad->title }}</h2>
+                <h3>Quantity: <span class="italic" id="quantity">{{$ad->price}}</span></h3>
+                <h1 id="bio">Description:</h1>
+                <h3>{{$ad->description}}</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div id="container">
+                <h2>Chat with the seller</h2>
+                <div id="chat"></div>
+                <div id="interface">
+                    <input id="messageContent"></input>
+                    <button id="create-Post">SEND</button>
+                </div>
+            </div>
+        </div>
     </div>
-@endif
-
-<div class="ad-details">
-    <h2>{{ $ad->title }}</h2>
-    <p>{{ $ad->description }}</p>
-    <p>Prezzo: {{ $ad->price }}</p>
-    <!-- Altri dettagli dell'annuncio -->
-
-    <!-- Pulsante per modificare l'annuncio -->
-    <a href="{{ route('ads.edit', $ad->id) }}" class="btn btn-primary">Modifica annuncio</a>
-
-    <!-- Form per eliminare l'annuncio -->
-    <form action="{{ route('ads.destroy', $ad->id) }}" method="POST" style="display: inline;">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="btn btn-danger"
-                onclick="return confirm('Sei sicuro di voler eliminare questo annuncio?')">Elimina annuncio
-        </button>
-    </form>
-
-    <!-- link per tornare alla pagina precedente -->
-    <a href="{{ url()->previous() }}" class="btn btn-secondary">Torna indietro</a>
-</div>
-{{--@endsection--}}
+</x-app-layout>

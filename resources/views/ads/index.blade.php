@@ -30,7 +30,6 @@
                 </div>
                 <div class="product-Info">
                     <h2>{{ $ad->title }}</h2>
-                    <h3>{{$ad->description}}</h3>
                     <h3>Price: <span class="italic">{{$ad->price}}</span></h3>
                 </div>
                 <img class="product-Photo" alt="Product Photo" src="
@@ -40,7 +39,7 @@
                     {{url('images/placeholder.png')}}
                 @endif
                 ">
-                <button class="contact-Seller" href="{{route('ads.show', ['ad' => $ad->id])}}">CONTACT
+                <button class="contact-Seller" onclick="location.href='{{route('ads.show', ['ad' => $ad->id])}}'">CONTACT
                 </button>
             </div>
         @endforeach

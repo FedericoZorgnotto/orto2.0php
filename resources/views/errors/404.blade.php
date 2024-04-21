@@ -1,6 +1,6 @@
 @vite('resources/css/errors/503error.css')
 
-<x-app-layout theme="dark" currentPage="#" pageTitle="Under construction">
+<x-app-layout theme="dark" currentPage="#" pageTitle="Nothing here">
     <h3 class="Text">
             We didn't find <span class="italic">anything</span><br>try looking somewhere else :(
     </h3>

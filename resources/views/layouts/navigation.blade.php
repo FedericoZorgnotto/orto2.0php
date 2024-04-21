@@ -1,10 +1,22 @@
 @props(['theme', 'currentPage'])
 
-@if($theme == "light")
-    @vite(['resources/css/navbar/navbarLight.css'])
-@elseif($theme == "dark")
-    @vite(['resources/css/navbar/navbarDark.css'])
-@endif
+
+@auth()
+    @if($theme == "light")
+        @vite(['resources/css/navbar/navbarLight.css'])
+    @elseif($theme == "dark")
+        @vite(['resources/css/navbar/navbarDarkLogged.css'])
+    @endif
+@else
+    @if($theme == "light")
+        @vite(['resources/css/navbar/navbarLight.css'])
+    @elseif($theme == "dark")
+        @vite(['resources/css/navbar/navbarDark.css'])
+    @endif
+@endauth
+
+
+
 <nav>
     <div class="header-left">
         <div class="selector">

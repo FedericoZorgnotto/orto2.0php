@@ -17,6 +17,7 @@ nav a, #about {
 .header-left {
     display: flex;
     justify-content: space-evenly;
+    margin-top: -1%;
 }
 
 .header-right {
@@ -89,12 +90,20 @@ nav a, #about {
     }
 }
 
+#home {
+    margin-top: -10.5%;
+}
+
 #dashboard {
     margin-top: -10.5%;
 }
 
 .slashMarginFix {
     margin-top: -5.5%
+}
+
+.homePointer {
+    margin-top: -10.5%;
 }
 
 .logoutPointer {

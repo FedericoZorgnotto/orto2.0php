@@ -1,4 +1,4 @@
-@vite('resources/css/errors/503error.css')
+@vite('resources/css/errors/error.css')
 
 <x-app-layout theme="dark" currentPage="#" pageTitle="Nothing here">
     <h3 class="Text">

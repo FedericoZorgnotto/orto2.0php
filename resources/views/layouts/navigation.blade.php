@@ -2,7 +2,7 @@
 
 @auth()
     @if($theme == "light")
-        @vite(['resources/css/navbar/navbarLight.css'])
+        @vite(['resources/css/navbar/navbarLightLogged.css'])
     @elseif($theme == "dark")
         @vite(['resources/css/navbar/navbarDarkLogged.css'])
     @endif

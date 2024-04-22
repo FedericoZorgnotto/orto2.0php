@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/ads', [AdController::class, 'index'])->name('ads.index');
 Route::get('/ads/create', [AdController::class, 'create'])->middleware(['auth', 'verified'])->name('ads.create');
 Route::post('/ads', [AdController::class, 'store'])->middleware(['auth', 'verified'])->name('ads.store');
-Route::get('/ads/{ad}', [AdController::class, 'show'])->name('ads.show');
+Route::get('/ads/{ad}', [AdController::class, 'show'])->middleware(['auth', 'verified'])->name('ads.show');
 Route::get('/ads/{ad}/edit', [AdController::class, 'edit'])->middleware(['auth', 'verified', 'CheckAdOwnership'])->name('ads.edit');
 Route::patch('/ads/{ad}', [AdController::class, 'update'])->middleware(['auth', 'verified', 'CheckAdOwnership'])->name('ads.update');
 Route::delete('/ads/{ad}', [AdController::class, 'destroy'])->middleware(['auth', 'verified', 'CheckAdOwnership'])->name('ads.destroy');

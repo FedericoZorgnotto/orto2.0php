@@ -21,7 +21,8 @@ export default defineConfig({
                 'resources/css/dashboard.css',
                 'resources/css/contact.css',
                 'resources/css/ourproduct.css',
-                'resources/css/errors/error.css'
+                'resources/css/errors/error.css',
+                'resources/css/profile.css',
             ],
             refresh: true,
         }),

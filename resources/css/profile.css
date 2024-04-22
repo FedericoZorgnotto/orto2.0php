@@ -1,0 +1,182 @@
+#container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    color: var(--green);
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    padding: 30px 55px 30px 55px;
+    border-radius: 35px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+#profileCard {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#passCard {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--green);
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+p {
+    color: var(--green);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input {
+    color: var(--green);
+    border: solid 5px var(--green);
+    border-radius: 35px;
+    height: 14px;
+    width: 400px;
+    padding: 22px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+input::placeholder {
+    color: var(--green);
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.negative-Feedback {
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.ball-Negative-Feedback {
+    background: var(--green);
+    border-radius: 35px;
+    width: 11px;
+    height: 11px;
+    margin-right: 5px;
+}
+
+.user-interactions {
+    margin-bottom: 30px;
+}
+
+.user-interactions-wLabel {
+    margin-bottom: 20px;
+}
+
+.user-interactions-delete {
+    margin-top: 25px;
+}
+
+label {
+    color: var(--green);
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+#validation-Button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 125px;
+    align-items: center;
+}
+
+#validation-Button-pass {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#validation-Button-Delete {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: -5%;
+}
+
+#enter-Account {
+    color: var(--white);
+    background-color: var(--green);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    width: 180px;
+    height: 55px;
+    padding-left: 25px;
+    padding-top: 4px;
+    border-radius: 35px;
+    border: none;
+    text-align: left;
+    transition: text-indent 0.5s ease;
+    margin-left: 80px;
+}
+
+#enter-Account:hover {
+    text-indent: 95px;
+    cursor: pointer;
+}
+
+#delete-account {
+    color: var(--white);
+    background-color: darkred;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    width: 180px;
+    height: 55px;
+    padding-left: 25px;
+    padding-top: 4px;
+    border-radius: 35px;
+    border: none;
+    text-align: left;
+    transition: text-indent 0.5s ease;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+#delete-account:hover {
+    text-indent: 65px;
+    cursor: pointer;
+}
+
+#logout-Btn {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--green);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    border-radius: 35px;
+    padding: 16px 30px 16px 30px;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#logout-Option {
+    display: flex;
+}

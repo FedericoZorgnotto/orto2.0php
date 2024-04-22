@@ -13,8 +13,6 @@ export default defineConfig({
                 'resources/css/signup.css',
                 'resources/css/navbar/navbarDark.css',
                 'resources/css/navbar/navbarLight.css',
-                'resources/css/navbar/navbarLightLogged.css',
-                'resources/css/navbar/navbarDarkLogged.css',
                 'resources/css/navbar/searchBarDark.css',
                 'resources/css/footerDark.css',
                 'resources/css/footerLight.css',

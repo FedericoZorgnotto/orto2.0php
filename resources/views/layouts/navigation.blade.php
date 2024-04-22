@@ -1,18 +1,10 @@
 @props(['theme', 'currentPage'])
 
-@auth()
-    @if($theme == "light")
-        @vite(['resources/css/navbar/navbarLightLogged.css'])
-    @elseif($theme == "dark")
-        @vite(['resources/css/navbar/navbarDarkLogged.css'])
-    @endif
-@else
-    @if($theme == "light")
-        @vite(['resources/css/navbar/navbarLight.css'])
-    @elseif($theme == "dark")
-        @vite(['resources/css/navbar/navbarDark.css'])
-    @endif
-@endauth
+@if($theme == "light")
+    @vite(['resources/css/navbar/navbarLight.css'])
+@elseif($theme == "dark")
+    @vite(['resources/css/navbar/navbarDark.css'])
+@endif
 
 <nav>
     <div class="header-left">
@@ -62,16 +54,12 @@
                 </div>
                 <div id="slash" class="slashMarginFix">/</div>
                 <div class="selector">
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <x-dropdown-link :href="route('logout')"
-                                         onclick="event.preventDefault();
-                                         this.closest('form').submit();"
-                                         class="noMargin">
-                            {{ __('LOGOUT') }}
-                        </x-dropdown-link>
-                    </form>
-                    <div class="ball-Pointer logoutPointer"></div>
+                    <a id="dashboard" href="{{ route("profile.edit") }}" class="noMargin">PROFILE</a>
+                    @if($currentPage == "profile")
+                        <div class="visible-Ball-Pointer"></div>
+                    @else
+                        <div class="ball-Pointer"></div>
+                    @endif
                 </div>
             </div>
         @else

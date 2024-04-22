@@ -88,15 +88,3 @@ nav a, #about {
         transform: scale(1);
     }
 }
-
-#dashboard {
-    margin-top: -10.5%;
-}
-
-.slashMarginFix {
-    margin-top: -5.5%
-}
-
-.logoutPointer {
-    margin-top: -13%;
-}

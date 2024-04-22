@@ -1,0 +1,27 @@
+#container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    color: var(--green);
+    background-color: #fdfdfd;
+    width: 450px;
+    height: 450px;
+    padding: 30px 55px 30px 55px;
+    border-radius: 35px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+img {
+    width: 120%;
+}
+

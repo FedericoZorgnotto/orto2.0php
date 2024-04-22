@@ -16,18 +16,33 @@
 <main>
     <div class="wrapper">
         <div class="grid1">
-            <a id="text1" href="{{ route("welcome") }}">ABOUT</a>
+            <a id="text1" href="{{ route("about") }}">ABOUT</a>
         </div>
         <div class="grid2">
-            <a id="text2" href="{{ route("welcome") }}">LEARN</a>
+            <a id="text2" href="{{ route("learn") }}">LEARN</a>
         </div>
         <div class="grid3">
             <a id="text3" href="{{ route("ads.index") }}">BUY</a>
         </div>
-        <div class="grid4">
-            <a id="text4up" href="{{ route("login") }}">LOGIN</a>
-            <a id="text4down" href="{{ route("signup") }}">SIGNUP</a>
-        </div>
+        @auth()
+            <div class="grid4">
+                <a id="text4up" href="{{ route("profile.edit") }}" style="margin-left: 45px">PROFILE</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <x-dropdown-link :href="route('logout')" id="text4down"
+                                     onclick="event.preventDefault();
+                                         this.closest('form').submit();"
+                                     class="noMargin">
+                        {{ __('LOGOUT') }}
+                    </x-dropdown-link>
+                </form>
+            </div>
+        @else
+            <div class="grid4">
+                <a id="text4up" href="{{ route("login") }}">LOGIN</a>
+                <a id="text4down" href="{{ route("signup") }}">SIGNUP</a>
+            </div>
+        @endauth
         <div class="grid5">
             <a id="text5" href="{{ route("ourproduct") }}">OUR PRODUCT</a>
         </div>

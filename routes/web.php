@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/ads', [AdController::class, 'index'])->name('ads.index');
 Route::get('/ads/create', [AdController::class, 'create'])->middleware(['auth', 'verified'])->name('ads.create');
 Route::post('/ads', [AdController::class, 'store'])->middleware(['auth', 'verified'])->name('ads.store');
-Route::get('/ads/{ad}', [AdController::class, 'show'])->name('ads.show');
+Route::get('/ads/{ad}', [AdController::class, 'show'])->middleware(['auth', 'verified'])->name('ads.show');
 Route::get('/ads/{ad}/edit', [AdController::class, 'edit'])->middleware(['auth', 'verified', 'CheckAdOwnership'])->name('ads.edit');
 Route::patch('/ads/{ad}', [AdController::class, 'update'])->middleware(['auth', 'verified', 'CheckAdOwnership'])->name('ads.update');
 Route::delete('/ads/{ad}', [AdController::class, 'destroy'])->middleware(['auth', 'verified', 'CheckAdOwnership'])->name('ads.destroy');
@@ -42,6 +42,15 @@ Route::post('/ads/{ad}/images', 'AdImageController@store')->middleware(['auth', 
 Route::get('/tokens', [TokenController::class, 'index'])->middleware(['auth', 'verified'])->name('tokens.index');
 Route::post('/tokens', [TokenController::class, 'store'])->middleware(['auth', 'verified'])->name('tokens.store');
 Route::delete('/tokens/{tokenId}', [TokenController::class, 'destroy'])->middleware(['auth', 'verified'])->name('tokens.destroy');
+
+Route::get('/about', function () {
+    return view('errors.503');
+})->name('about');
+
+ROute::get('/learn', function () {
+    return view('errors.503');
+})->name('learn');
+
 
 Route::get('/ourproduct', function () {
     return view('ourproduct');

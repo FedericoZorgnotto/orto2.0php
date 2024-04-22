@@ -47,10 +47,13 @@ Route::get('/about', function () {
     return view('errors.503');
 })->name('about');
 
-ROute::get('/learn', function () {
+Route::get('/learn', function () {
     return view('errors.503');
 })->name('learn');
 
+ROute::get('/503', function () {
+    return view('errors.503');
+})->name('503');
 
 Route::get('/ourproduct', function () {
     return view('ourproduct');

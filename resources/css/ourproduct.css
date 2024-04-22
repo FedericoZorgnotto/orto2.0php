@@ -1,5 +1,5 @@
 #container {
-    margin-top: 150px;
+    margin-top: 120px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -7,7 +7,7 @@
 
 .card {
     color: var(--green);
-    background-color: #fdfdfd;
+    background-color: white;
     width: 450px;
     height: 450px;
     padding: 30px 55px 30px 55px;
@@ -25,3 +25,62 @@ img {
     width: 120%;
 }
 
+#middle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 20%;
+}
+
+#productName {
+    color: var(--green);
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 75px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    margin: 0px;
+    text-align: left;
+}
+
+#phrase {
+    margin: 0px;
+    color: var(--green);
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#validation-Button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#enter-Account {
+    color: var(--white);
+    background-color: var(--green);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    width: 180px;
+    height: 55px;
+    padding-left: 25px;
+    padding-top: 4px;
+    border-radius: 35px;
+    border: none;
+    text-align: left;
+    transition: text-indent 0.5s ease;
+    margin-left: -5%;
+}
+
+#enter-Account:hover {
+    text-indent: 95px;
+    cursor: pointer;
+}

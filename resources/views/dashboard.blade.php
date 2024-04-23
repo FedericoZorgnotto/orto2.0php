@@ -19,7 +19,6 @@
     let lineChart = undefined
     @if($user->tokens()!=null)
     let tokens = @json($user->tokens);
-    tokens = ['token1', 'token2'];
     console.log(tokens);
     @endif
     let tokenUrl = "{{route('welcome').'/hubData'}}";

@@ -39,10 +39,10 @@ select {
     color: var(--green);
     border: solid 5px var(--green);
     border-radius: 35px;
-    height: 14px;
+    height: 50px;
     width: 390px;
-    padding: 22px;
-    font-size: 16px;
     font-weight: bold;
     font-style: italic;
+    text-align: center;
+    font-size: 20px;
 }
